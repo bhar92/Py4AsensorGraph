@@ -19,7 +19,7 @@ Copy the SensorGraph file into `/sdcard/sl4a/scripts`
     - Click on SensorGraph
     - Click on Accelerometer
     - Click on accGraph.py
-    - Click on the 'Shell' icon(it looks like [this](http://screenshots.en.sftcdn.net/blog/en/2008/08/screen-capture-2.png =100x20)) to run the program.
+    - Click on the 'Shell' icon(it looks like [this](http://screenshots.en.sftcdn.net/blog/en/2008/08/screen-capture-2.png)) to run the program.
 
 ## Exiting the program:
 
