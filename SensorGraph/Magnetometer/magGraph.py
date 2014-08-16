@@ -27,7 +27,6 @@ def postMagnetometerValues():
 	droid.eventPost('stdout', json.dumps(xyzDict))
  
 
-i = 0
 while True: 
     postMagnetometerValues()
     time.sleep(0.3)

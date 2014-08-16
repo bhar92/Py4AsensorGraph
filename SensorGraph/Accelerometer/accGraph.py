@@ -26,7 +26,6 @@ def postAccelerometerValues():
 	xyzDict = {"x":xList, "y":yList, "z":zList}
 	droid.eventPost('stdout', json.dumps(xyzDict))
  
-i = 0
 while True: 
     postAccelerometerValues()
     time.sleep(0.3)
