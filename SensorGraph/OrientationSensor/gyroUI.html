@@ -14,13 +14,10 @@
         <style>
             body { background-color: #EEE }
             #banner { text-align: center }
-            #legend { text-align: center;
-                        font-size: 15px }
             #egraph {position: absolute;
-                        top: 115px; 
+                        top: 50px; 
                         bottom: 20px; 
                         width: 96%;}
-            }
         </style>
  
         <script>
@@ -36,12 +33,16 @@
                         xData.push([i, json_data.x[i]]);
                         yData.push([i, json_data.y[i]]);
                         zData.push([i, json_data.z[i]]);
-                    }   
-                    $.plot("#egraph", [xData,yData,zData],{
+                    }                       $.plot("#egraph", [
+                        {label:"X-Axis", data:xData},
+                        {label:"Y-Axis", data:yData},
+                        {label:"Z-Axis", data:zData},
+                        ],{
                         yaxis:
                         {
                             min:-3, max: 3
                         }
+                        
                     });
                 });
         </script>
@@ -51,14 +52,7 @@
     <body>
         <div id="banner">
             <h3>Gyroscope Readings</h3>
-           
         </div> 
-    
-        <div id="legend">
-            X-Axis: Yellow <br>
-            Y-Axis: Blue <br>
-            Z-Axis: Red <br> 
-        </div>
 
         <div id="egraph"></div> 
 

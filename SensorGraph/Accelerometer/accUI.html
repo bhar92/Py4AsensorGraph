@@ -2,30 +2,23 @@
 <html>
     <head>
         <script src="/sdcard/sl4a/scripts/SensorGraph/jquery.min.js"></script>
-
-        <script src="/sdcard/sl4a/scripts/SensorGraph/jquery.flot.min.js"></script>
-
- 
+        <script src="/sdcard/sl4a/scripts/SensorGraph/jquery.flot.min.js"></script> 
         <meta name="viewport" id="viewport"
             content="width=device-width, target-densitydpi=device-dpi,
             initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
         />
  
-        <style>
+          <style>
             body { background-color: #EEE }
             #banner { text-align: center }
-            #legend { text-align: center;
-                        font-size: 15px }
             #egraph {position: absolute;
-                        top: 115px; 
+                        top: 50px; 
                         bottom: 20px; 
                         width: 96%;}
-            }
         </style>
  
         <script>
             var droid = new Android();
- 
             droid.registerCallback('stdout', function(e) {
                     var json_data = eval('(' + e.data + ')');
                     
@@ -37,14 +30,18 @@
                         yData.push([i, json_data.y[i]]);
                         zData.push([i, json_data.z[i]]);
                     }   
-                    $.plot("#egraph", [xData,yData,zData],{
+                    $.plot("#egraph", [
+                        {label:"X-Axis", data:xData},
+                        {label:"Y-Axis", data:yData},
+                        {label:"Z-Axis", data:zData},
+                        ],{
                         yaxis:
                         {
                             min:-10, max: 10
                         }
+                        
                     });
                 });
-
         </script>
  
     </head>
@@ -52,20 +49,12 @@
     <body>
         <div id="banner">
             <h3>Accelerometer Readings</h3>
-           
         </div> 
-    
-        <div id="legend">
-            X-Axis: Yellow <br>
-            Y-Axis: Blue <br>
-            Z-Axis: Red <br> 
-        </div>
 
         <div id="egraph"></div> 
 
        <!-- <button id="killer" type="button"
                 onclick="kill()"
         >Exit</button>  -->
- 
     </body>
 </html>
