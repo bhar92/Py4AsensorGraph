@@ -6,7 +6,7 @@ Plotting an Android phone's accelerometer, gyro and magnetometer values with Pyt
 ## Installing necessary apps:
 
 1. Download and install the latest [SL4A App apk file](https://github.com/kuri65536/sl4a/releases).
-2. Then download and install [Py4A App apk file](https://github.com/kuri65536/python-for-android/releases/download/r25/PythonForAndroid-debug-r25.apk).
+2. Then download and install [Py4A App apk file](https://github.com/kuri65536/python-for-android/releases/download/r26/PythonForAndroid-debug-r26.apk).
     -  Open Python for Android and press Install
     
 ## Copying the programs: 
