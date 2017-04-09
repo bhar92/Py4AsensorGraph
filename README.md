@@ -1,3 +1,5 @@
+WARNING: Currently, as it is, the scripts and below instructions do not work when I tested them on a Nexus 6P running Android 7.1.2. 
+
 Py4AsensorGraph
 ===============
 
